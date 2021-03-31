@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+table {
+  width: 100vw;
+  border: 1px solid black;
+}
+td {
+  text-align: center;
+  font-size: large;
+}
+
+.searchbox {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.search {
+  border: 1px solid black;
+  width: 50vw;
+  height: 20px;
+  border-radius: 40px;
+  margin: 5px;
+}
