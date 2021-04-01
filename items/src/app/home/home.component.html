@@ -1,9 +1,14 @@
 <div>
     <table>
-        <tr>
-            <td>Value</td>
-            <td>Display</td>
-            <td>Description</td>
+        <tr class="row">
+            <th>Value</th>
+            <th>Display</th>
+            <th>Description</th>
+        </tr>
+        <tr *ngFor="let item of data">
+            <td>{{item.value}}</td>
+            <td>{{item.display}}</td>
+            <td>{{item.desc}}</td>
         </tr>
     </table>
 </div>

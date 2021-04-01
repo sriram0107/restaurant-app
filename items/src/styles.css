@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 table {
   width: 100vw;
-  border: 1px solid black;
+  border-collapse: separate;
+  border-spacing: 5em;
+  font-size: large;
 }
 td {
   text-align: center;
@@ -22,4 +24,10 @@ td {
   height: 20px;
   border-radius: 40px;
   margin: 5px;
+}
+
+.row {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 2px;
 }

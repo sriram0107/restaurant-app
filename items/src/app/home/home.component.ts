@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input} from '@angular/core';
+import { Data } from '../models/Data';
 
 @Component({
   selector: 'app-home',
@@ -6,16 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  data = "";
-  err = "";
+  @Input() data: Data[];
   ngOnInit(): void {
-    fetch("http://localhost:5000")
-      .then(data => data.json())
-      .then(res => {
-        this.data = JSON.stringify(res);
-        console.log(this.data);
-      })
-      .catch(err=>this.err = err)
   }
 
 }
