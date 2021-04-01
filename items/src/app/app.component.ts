@@ -30,17 +30,17 @@ export class AppComponent {
 
 
   filterValue = (name: string) => {
-    console.log("filtering y value", name);
+    console.log("filtering by value", name);
     this.display_data = this.data.filter(item => {
-      item.value === name;
+      return item.value.toLowerCase() === name.toLowerCase();
     })
     console.log(this.data);
   }
 
   filterOthers = (name: string) => {
-    console.log("filtering y value", name);
+    console.log("filtering by display/desc", name);
     this.display_data = this.data.filter(item => {
-      item.display === name || item.desc === name;
+      return item.display.toLowerCase() === name.toLowerCase() || item.desc.toLowerCase() === name.toLowerCase();
     })
   }
 

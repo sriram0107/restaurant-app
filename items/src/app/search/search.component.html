@@ -1,7 +1,10 @@
 <div class="searchbox">
-<input placeholder = "Value" class="search" #search_value/>
-<button (click)="searchValue(search_value.value)">Search by value</button>
-<input placeholder="Others" class="search" #search_other />
-<button (click)="searchOthers(search_other.value)">Search By Others</button>
-<button (click)="resetSearch()">Reset</button>
+<div class="left">
+<div class="search_bar"><input placeholder="Value" class="search" #search_value />
+<button (click)="searchValue(search_value.value)">Search by value</button></div>
+<div class="search_bar"><input placeholder="Others" class="search" #search_other />
+<button (click)="searchOthers(search_other.value)">Search By Others</button></div>
+<div class="error">{{error}}</div>
+</div>
+<button class="reset" (click)="resetSearch()">Reset</button>
 </div>
