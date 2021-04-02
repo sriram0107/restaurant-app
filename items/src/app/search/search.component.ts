@@ -1,11 +1,11 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
+import { Component,Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
   // Error message to be displayed if character length <= 3
   error: string;
   // Minimum length of characters to be entered
@@ -21,7 +21,7 @@ export class SearchComponent implements OnInit {
     this.minlen = 3;
   }
 
-  // Checks for caharcter length and sets error message if applicable
+  // Checks for character length and sets error message if applicable
   checkLength(str:string):boolean {
     if (str.length >= this.minlen) {
       this.error = "";
@@ -49,8 +49,4 @@ export class SearchComponent implements OnInit {
   resetSearch() {
     this.reset.emit();
   }
-
-  ngOnInit(): void {
-  }
-
 }

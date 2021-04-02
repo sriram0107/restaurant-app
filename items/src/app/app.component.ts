@@ -36,8 +36,9 @@ export class AppComponent {
 // filters results by value
   filterValue = (name: string) => {
     console.log("filtering by value", name);
+    name = name.toLowerCase();
     this.display_data = this.data.filter(item => {
-      return item.value.toLowerCase() === name.toLowerCase();
+      return item.value.toLowerCase() === name;
     })
     console.log(this.data);
   }
@@ -45,8 +46,9 @@ export class AppComponent {
   // filters results by display/desc value
   filterOthers = (name: string) => {
     console.log("filtering by display/desc", name);
+    name = name.toLowerCase();
     this.display_data = this.data.filter(item => {
-      return item.display.toLowerCase() === name.toLowerCase() || item.desc.toLowerCase() === name.toLowerCase();
+      return item.display.toLowerCase() === name || item.desc.toLowerCase() === name;
     })
   }
 

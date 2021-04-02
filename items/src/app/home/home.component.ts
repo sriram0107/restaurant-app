@@ -1,4 +1,4 @@
-import { Component, OnInit , Input} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { Data } from '../models/Data';
 
 @Component({
@@ -6,10 +6,7 @@ import { Data } from '../models/Data';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   // Data to be displayed
   @Input() data: Data[];
-  ngOnInit(): void {
-  }
-
 }
