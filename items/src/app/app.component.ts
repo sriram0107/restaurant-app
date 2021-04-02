@@ -8,14 +8,20 @@ import { API_ENDPOINT } from '../config';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // original data from API
   data: Data[];
+  // data to be displayed - changes upon search results
   display_data: Data[];
+  // Error message that displays if backend produces an error
   err: string;
+
   constructor() {
     this.data = [];
     this.display_data = [];
     this.err = "";
   }
+
+  // Lifecycle hook to get data from the backend
   ngOnInit(): void {
     fetch(API_ENDPOINT)
       .then(data => data.json())
@@ -27,7 +33,7 @@ export class AppComponent {
       .catch(err => this.err = "Error in fetching data from the backend")
   }
 
-
+// filters results by value
   filterValue = (name: string) => {
     console.log("filtering by value", name);
     this.display_data = this.data.filter(item => {
@@ -36,6 +42,7 @@ export class AppComponent {
     console.log(this.data);
   }
 
+  // filters results by display/desc value
   filterOthers = (name: string) => {
     console.log("filtering by display/desc", name);
     this.display_data = this.data.filter(item => {
@@ -43,6 +50,7 @@ export class AppComponent {
     })
   }
 
+  // Resets display data
   resetSearch() {
     this.display_data = this.data;
   }

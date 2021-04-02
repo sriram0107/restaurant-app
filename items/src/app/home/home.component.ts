@@ -7,6 +7,7 @@ import { Data } from '../models/Data';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  // Data to be displayed
   @Input() data: Data[];
   ngOnInit(): void {
   }
