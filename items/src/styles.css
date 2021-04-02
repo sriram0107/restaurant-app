@@ -3,31 +3,3 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
-
-table {
-  width: 100%;
-  border: 1px solid black;
-  background-color: #eeeeee;
-  border-collapse: collapse;
-  /* border-spacing: 2em; */
-  font-size: large;
-}
-
-tr:nth-child(even) {
-  background-color: #e2e2e2;
-}
-
-td {
-  text-align: center;
-  font-size: large;
-  padding: 6px;
-}
-
-.row {
-  height: 10%;
-  background-color: rgb(23, 138, 23);
-  color: white;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  margin: 2px;
-}

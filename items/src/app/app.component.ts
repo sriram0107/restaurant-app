@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Data } from './models/Data';
-
-const API_ENDPOINT = 'http://localhost:5000';
+import { API_ENDPOINT } from '../config';
 
 @Component({
   selector: 'app-root',
@@ -25,7 +24,7 @@ export class AppComponent {
         this.data = this.display_data;
         console.log(this.data);
       })
-      .catch(err => this.err = err)
+      .catch(err => this.err = "Error in fetching data from the backend")
   }
 
 

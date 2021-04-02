@@ -1,4 +1,5 @@
 <div>
   <app-search (searchByValue)= "filterValue($event)" (searchByOthers)= "filterOthers($event)" (reset) = "resetSearch()"></app-search>
   <app-home [data]="display_data"></app-home>
+  {{err}}
 </div>
